@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5246A59D1E2D0BDC005B074C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246A59C1E2D0BDC005B074C /* Constants.swift */; };
+		5246A59F1E2D0C59005B074C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246A59E1E2D0C59005B074C /* Station.swift */; };
 		5258AB591E2BA4AA003AB89D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB581E2BA4AA003AB89D /* AppDelegate.swift */; };
 		5258AB5B1E2BA4AA003AB89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB5A1E2BA4AA003AB89D /* ViewController.swift */; };
 		5258AB5E1E2BA4AA003AB89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258AB5C1E2BA4AA003AB89D /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		5258AB631E2BA4AA003AB89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */; };
 		5258AB6E1E2BA4AA003AB89D /* eFuelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB6D1E2BA4AA003AB89D /* eFuelTests.swift */; };
 		5258AB791E2BA4AA003AB89D /* eFuelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB781E2BA4AA003AB89D /* eFuelUITests.swift */; };
+		B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5246A59C1E2D0BDC005B074C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5246A59E1E2D0C59005B074C /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		5258AB551E2BA4AA003AB89D /* eFuel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eFuel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5258AB581E2BA4AA003AB89D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5258AB5A1E2BA4AA003AB89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		5258AB741E2BA4AA003AB89D /* eFuelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eFuelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5258AB781E2BA4AA003AB89D /* eFuelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eFuelUITests.swift; sourceTree = "<group>"; };
 		5258AB7A1E2BA4AA003AB89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.debug.xcconfig"; sourceTree = "<group>"; };
+		8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,8 @@
 				5258AB6C1E2BA4AA003AB89D /* eFuelTests */,
 				5258AB771E2BA4AA003AB89D /* eFuelUITests */,
 				5258AB561E2BA4AA003AB89D /* Products */,
+				B6A389067505A1A6B8513080 /* Pods */,
+				FD575A9807382F0D0FAD0C3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +114,8 @@
 				5258AB5F1E2BA4AA003AB89D /* Assets.xcassets */,
 				5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */,
 				5258AB641E2BA4AA003AB89D /* Info.plist */,
+				5246A59C1E2D0BDC005B074C /* Constants.swift */,
+				5246A59E1E2D0C59005B074C /* Station.swift */,
 			);
 			path = eFuel;
 			sourceTree = "<group>";
@@ -125,6 +138,23 @@
 			path = eFuelUITests;
 			sourceTree = "<group>";
 		};
+		B6A389067505A1A6B8513080 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */,
+				F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FD575A9807382F0D0FAD0C3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5258AB7D1E2BA4AA003AB89D /* Build configuration list for PBXNativeTarget "eFuel" */;
 			buildPhases = (
+				0ABF02AE3E290C1D767ABDA6 /* [CP] Check Pods Manifest.lock */,
 				5258AB511E2BA4A9003AB89D /* Sources */,
 				5258AB521E2BA4A9003AB89D /* Frameworks */,
 				5258AB531E2BA4A9003AB89D /* Resources */,
+				356EC4DD3C7A51B0EF2AB4FA /* [CP] Embed Pods Frameworks */,
+				3AF7897B1C0E102F4E3805A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +290,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ABF02AE3E290C1D767ABDA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		356EC4DD3C7A51B0EF2AB4FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eFuel/Pods-eFuel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AF7897B1C0E102F4E3805A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eFuel/Pods-eFuel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5258AB511E2BA4A9003AB89D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +345,8 @@
 			files = (
 				5258AB5B1E2BA4AA003AB89D /* ViewController.swift in Sources */,
 				5258AB591E2BA4AA003AB89D /* AppDelegate.swift in Sources */,
+				5246A59F1E2D0C59005B074C /* Station.swift in Sources */,
+				5246A59D1E2D0BDC005B074C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +496,7 @@
 		};
 		5258AB7E1E2BA4AA003AB89D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6LN88VS786;
@@ -426,6 +510,7 @@
 		};
 		5258AB7F1E2BA4AA003AB89D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6LN88VS786;
