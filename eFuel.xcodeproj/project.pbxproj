@@ -16,6 +16,7 @@
 		5258AB631E2BA4AA003AB89D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */; };
 		5258AB6E1E2BA4AA003AB89D /* eFuelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB6D1E2BA4AA003AB89D /* eFuelTests.swift */; };
 		5258AB791E2BA4AA003AB89D /* eFuelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB781E2BA4AA003AB89D /* eFuelUITests.swift */; };
+		528DE9EE1E2EB94D000DF931 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528DE9ED1E2EB94D000DF931 /* Notes.rtf */; };
 		B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		5258AB741E2BA4AA003AB89D /* eFuelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eFuelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5258AB781E2BA4AA003AB89D /* eFuelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eFuelUITests.swift; sourceTree = "<group>"; };
 		5258AB7A1E2BA4AA003AB89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528DE9ED1E2EB94D000DF931 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.debug.xcconfig"; sourceTree = "<group>"; };
 		8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				5258AB641E2BA4AA003AB89D /* Info.plist */,
 				5246A59C1E2D0BDC005B074C /* Constants.swift */,
 				5246A59E1E2D0C59005B074C /* Stations.swift */,
+				528DE9ED1E2EB94D000DF931 /* Notes.rtf */,
 			);
 			path = eFuel;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528DE9EE1E2EB94D000DF931 /* Notes.rtf in Resources */,
 				5258AB631E2BA4AA003AB89D /* LaunchScreen.storyboard in Resources */,
 				5258AB601E2BA4AA003AB89D /* Assets.xcassets in Resources */,
 				5258AB5E1E2BA4AA003AB89D /* Main.storyboard in Resources */,
