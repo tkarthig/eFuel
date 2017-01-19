@@ -19,14 +19,52 @@ class Stations  {
         Alamofire.request(currentStationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseJSON {
                 response in
-                print (CURRENT_URL)
+                //print (CURRENT_URL)
                 //print(response.result.value as Any)   // result of response serialization
-                let result = response.result.value
+                let result = response.result
                 
-                if let dict = result as? Dictionary<String, AnyObject>
+                if let dict = result.value as? Dictionary<String, AnyObject>{
+                   
+                    
+                    
+                    
+                    
+                    
+                   // print(dict)
+                    
+                    //let provider = dict["Provider"] as? String
+                    let name_temp = dict["chargerstations"] as? [Dictionary<String,AnyObject>]
+                    //print (name_temp!)
+                    
+                    let name_temp2 = name_temp![0] as Dictionary<String, AnyObject>
+                    
+                  //  print(name_temp2)
+                
+                    let name_temp3 = name_temp2["csmd"] as? Dictionary<String, AnyObject>
+                    
+                    //print(name_temp3!)
+                    
+                    let name_temp4 = name_temp3!["name"] as! String
+                    
+                    print(name_temp4)
+                    
+                    
+                    
+                }
+                
+                
+                
             }
-        completed()
+        
+                completed()
     }
+
+
+
+
+
+
+
 
 
 
