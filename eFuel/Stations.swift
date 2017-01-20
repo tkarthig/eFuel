@@ -13,6 +13,10 @@ import Alamofire
 class Stations  {
     
     
+    
+    
+    
+    
     //Function to download JSON response
     func downloadStations(completed: DownloadComplete)  {
         let currentStationsURL = URL(string : CURRENT_URL)!
@@ -25,10 +29,6 @@ class Stations  {
                 
                 if let dict = result.value as? Dictionary<String, AnyObject>{
                    
-                    
-                    
-                    
-                    
                     
                    // print(dict)
                     
