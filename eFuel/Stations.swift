@@ -12,14 +12,28 @@ import Alamofire
 
 class Stations  {
     
+    var _name : String!
+    
+    
+
+    
+    var name : String {
+        if _name == nil {
+           _name = "Nei"
+        }
+        return _name
+    }
     
     
     
+    
+
     
     
     //Function to download JSON response
     func downloadStations(completed: DownloadComplete)  {
         let currentStationsURL = URL(string : CURRENT_URL)!
+        
         Alamofire.request(currentStationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseJSON {
                 response in
@@ -46,7 +60,8 @@ class Stations  {
                     
                     let name_temp4 = name_temp3!["name"] as! String
                     
-                    print(name_temp4)
+                    
+                    self._name = name_temp4
                     
                     
                     

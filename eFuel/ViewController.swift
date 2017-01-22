@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var tabelView: UITableView!
-    var currentStations = Stations()
+    var currentStations : Stations!
     
     @IBOutlet weak var name: UILabel!
     
@@ -22,11 +22,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tabelView.delegate = self
         tabelView.dataSource=self
+        currentStations = Stations()
+        
+        //currentStations.updateTest()
         
         currentStations.downloadStations{
+            self.updateMainUI()
             
         }
-          
+       
+        
     }
     
     
@@ -51,8 +56,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     func updateMainUI(){
-        name.text=
+        name.text = currentStations.name
         
+        print (currentStations.name)
+        
+        //name.text="sadsadsad"
         
         
         
@@ -60,6 +68,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
+    @IBAction func updateUI(_ sender: Any) {
+        
+        name.text = currentStations.name
+    }
 
 
 }
