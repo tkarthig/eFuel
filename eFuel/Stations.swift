@@ -24,9 +24,6 @@ class Stations  {
         return _name
     }
     
-    
-    
-    
 
     
     

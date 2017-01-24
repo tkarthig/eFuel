@@ -12,9 +12,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var tabelView: UITableView!
-    var currentStations : Stations!
-    
     @IBOutlet weak var name: UILabel!
+    
+    var currentStations : Stations!
     
     
     override func viewDidLoad() {
