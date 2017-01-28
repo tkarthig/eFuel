@@ -23,14 +23,4 @@ import Foundation
 
     let CURRENT_URL = "\(BASE_URL)apikey=\(API_KEY)&apiversion=\(API_VERSION)&action=\(ACTION)&type=\(TYPE)&northeast=\(NORTHEST)&southwest=\(SOUTHWEST)"
 
-/*=
- 
- 
- //let CURRENT_URL = "\{BASE_URL}"
- 
- 
 
- 
- "apikey=cd4940380eaee58fe2f84ef3d66dd572&apiversion=3&action=search&type=rectangle&northeast=(60.27513309999999,11.179013199999986)&southwest=(60.2514115,11.202181999999993)"
- 
- */

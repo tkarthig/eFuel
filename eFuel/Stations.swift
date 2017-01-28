@@ -15,17 +15,15 @@ class Stations  {
     var _name : String!
     
     
-
-    
     var name : String {
         if _name == nil {
-           _name = "Nei"
+           _name = ""
         }
         return _name
     }
     
-
-//    test
+    
+    
     
     //Function to download JSON response
     func downloadStations(completed: DownloadComplete)  {
@@ -34,7 +32,7 @@ class Stations  {
         Alamofire.request(currentStationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseJSON {
                 response in
-                //print (CURRENT_URL)
+                print (CURRENT_URL)
                 //print(response.result.value as Any)   // result of response serialization
                 let result = response.result
                 

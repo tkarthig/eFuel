@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,7 +15,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tabelView: UITableView!
     @IBOutlet weak var name: UILabel!
     
-    var currentStations : Stations!
+   
+    var station : Station!
+    var stations : [Station]!
     
     
     override func viewDidLoad() {
@@ -22,56 +25,89 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tabelView.delegate = self
         tabelView.dataSource=self
-        currentStations = Stations()
         
-        //currentStations.updateTest()
+        stations = [Station]()
         
-        currentStations.downloadStations{
-            self.updateMainUI()
-            
-        }
+        
+
+        
+        
+         
+         self.downloadStations {
+         
+            print("Test_first")
+         }
+        
+        
+    
        
         
-    }
+    }//End viewDidLoad()
     
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "stationCell", for: indexPath)
-        
         return cell
         
     }
     
+
     
-    func updateMainUI(){
-        name.text = currentStations.name
+    
+    
+    //Functions to help
+    
+    
+    
+    
+    
+    //Function to download JSON response
+    func downloadStations(completed: DownloadComplete)  {
+        let stationsURL = URL(string : CURRENT_URL)!
         
-        print (currentStations.name)
-        
-        //name.text="sadsadsad"
-        
-        
-        
+        Alamofire.request(stationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
+            .responseJSON { response in
+                
+                if let dict = response.result.value as? Dictionary<String, AnyObject> {
+                    if let stations = dict["chargerstations"] as? [Dictionary<String, AnyObject>] {
+                        for object in stations {
+                            let station = Station(station: object)
+                            self.stations.append(station)
+                            print(station.name)
+                    
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                }
+                
+                
+                
+                
+      
+                    
+                    
+            }//End of responseJSON
+        completed()
     }
     
+
     
     
-    @IBAction func updateUI(_ sender: Any) {
-        
-        name.text = currentStations.name
-    }
+    
+    
 
 
 }
