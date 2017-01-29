@@ -16,6 +16,7 @@ class Station {
     var _house_number : String!
     var _zipcode : String!
     var _city : String!
+    var _position : String!
     
     
     var name: String {
@@ -62,11 +63,23 @@ class Station {
         return _city
     }
     
+    var position : String {
+        
+        if _position == nil {
+            _position = ""
+            
+        }
+        return _position
+    }
+    
     init(station: Dictionary<String, AnyObject>) {
         
         if let station = station["csmd"] as? Dictionary<String, AnyObject> {
             if let name = station["name"] as? String {
                 _name=name
+            }
+            if let position = station["Position"] as? String {
+                _position=position
             }
         }
         

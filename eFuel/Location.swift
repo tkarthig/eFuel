@@ -7,6 +7,7 @@
 //
 
 import CoreLocation
+import Darwin
 
 class Location {
     
@@ -16,6 +17,13 @@ class Location {
     
     var latitude : Double!
     var longitude : Double!
+    
+    
+    
+
+        
+        
+    
     
     
     

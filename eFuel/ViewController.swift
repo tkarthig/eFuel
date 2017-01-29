@@ -58,7 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             currentLocation = locationManager.location
             Location.sharedInstance.latitude = currentLocation.coordinate.latitude
             Location.sharedInstance.longitude = currentLocation.coordinate.longitude
-            print (currentLocation.coordinate.latitude,currentLocation.coordinate.longitude)
             
         } else {
             locationManager.requestWhenInUseAuthorization()
@@ -68,10 +67,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
     }
-    
-    
-    
-    
     
     /*----------------------------------------------------------------------------------------------------
      Table view related functions
@@ -111,6 +106,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func downloadStations(completed: DownloadComplete)  {
         let stationsURL = URL(string : CURRENT_URL)!
         
+        print(CURRENT_URL)
+        
         Alamofire.request(stationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseJSON { response in
                 
@@ -119,6 +116,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         for object in stations {
                             let station = Station(station: object)
                             self.stations.append(station)
+                            //print (station.position)
+                            
+                            
+                            
+                            let delimiter = ","
+                            let test = station.position
+
+                            var token = test.components(separatedBy: delimiter)
+                            var lat = token[0].replacingOccurrences(of: "(", with: "")
+                            var long = token[1].replacingOccurrences(of: ")", with: "")
+                            
+                            print (lat)
+                            print (long)
+                            
+                            
+                            
                         }
                         self.tabelView.reloadData()
                     }
@@ -130,8 +143,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         completed()
     }
     
-
-
-
 }/*End main class*/
-
