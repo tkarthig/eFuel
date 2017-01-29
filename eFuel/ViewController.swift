@@ -94,6 +94,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = stations[indexPath.row] as Station
         self.name.text = selectedItem.name
+        
+        
     }
     
 
@@ -116,21 +118,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         for object in stations {
                             let station = Station(station: object)
                             self.stations.append(station)
-                            //print (station.position)
-                                //kjjk
-                            
-                            
-                            let delimiter = ","
-                            let test = station.position
-
-                            var token = test.components(separatedBy: delimiter)
-                            var lat = token[0].replacingOccurrences(of: "(", with: "")
-                            var long = token[1].replacingOccurrences(of: ")", with: "")
-                            
-                            print (lat)
-                            print (long)
-                            
-                            
                             
                         }
                         self.tabelView.reloadData()

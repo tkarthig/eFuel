@@ -16,7 +16,8 @@ class Station {
     var _house_number : String!
     var _zipcode : String!
     var _city : String!
-    var _position : String!
+    var _positionLatitude : String!
+    var _positionLongitude : String!
     
     
     var name: String {
@@ -63,14 +64,27 @@ class Station {
         return _city
     }
     
-    var position : String {
+    var positionLatitude  : String {
         
-        if _position == nil {
-            _position = ""
+        if _positionLatitude == nil {
+            _positionLatitude = ""
             
         }
-        return _position
+        return _positionLatitude
     }
+    
+    
+    var positionLongitude  : String {
+        
+        if _positionLongitude == nil {
+            _positionLongitude = ""
+            
+        }
+        return _positionLongitude
+    }
+    
+    
+    
     
     init(station: Dictionary<String, AnyObject>) {
         
@@ -79,7 +93,12 @@ class Station {
                 _name=name
             }
             if let position = station["Position"] as? String {
-                _position=position
+                let delimiter = ","
+                var token = position.components(separatedBy: delimiter)
+                _positionLatitude = token[0].replacingOccurrences(of: "(", with: "")
+                _positionLongitude = token[1].replacingOccurrences(of: ")", with: "")
+                
+                
             }
         }
         
