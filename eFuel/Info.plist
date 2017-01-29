@@ -28,9 +28,9 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>UISupportedInterfaceOrientations</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need your location information to provide information about the nearby charging stations</string>
 </dict>
 </plist>

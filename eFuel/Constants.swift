@@ -14,8 +14,12 @@ import Foundation
     let API_VERSION="3"
     let ACTION="search"
     let TYPE="rectangle"
-    let NORTHEST="(60.27513309999999,11.179013199999986)"
+    let NORTHEST="(62.27513309999999,13.179013199999986)"
     let SOUTHWEST="(60.2514115,11.202181999999993)"
+
+
+    //let NORTHEST="(37.785834,13.179013199999986)"
+    //let SOUTHWEST="(60.2514115,11.202181999999993)"
 
 
     typealias DownloadComplete = ()->()

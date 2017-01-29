@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import CoreLocation
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
     
     @IBOutlet weak var tabelView: UITableView!
     @IBOutlet weak var name: UILabel!
     
-   
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
     var station : Station!
     var stations : [Station]!
     
@@ -23,27 +27,55 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
+        
+        
+        self.stations = [Station]()
         tabelView.delegate = self
         tabelView.dataSource=self
         
-        stations = [Station]()
-        
-        
-
-        
-        
-         
-         self.downloadStations {
-         
-            print("Test_first")
+        self.downloadStations {
+           
          }
-        
-        
+    }/*End viewDidLoad()*/
     
-       
-        
-    }//End viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationAuthStatus()
+    }
     
+    
+    /*----------------------------------------------------------------------------------------------------
+     Location related functions
+     -----------------------------------------------------------------------------------------------------*/
+    
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            print (currentLocation.coordinate.latitude,currentLocation.coordinate.longitude)
+            
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
+    
+        
+        
+    }
+    
+    
+    
+    
+    
+    /*----------------------------------------------------------------------------------------------------
+     Table view related functions
+     -----------------------------------------------------------------------------------------------------*/
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,23 +83,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return stations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stationCell", for: indexPath)
-        return cell
-        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "stationCell", for: indexPath) as? StationCell {
+            let station = stations[indexPath.row]
+            cell.configureCell(station: station)
+            return cell
+        } else {
+            return StationCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedItem = stations[indexPath.row] as Station
+        self.name.text = selectedItem.name
     }
     
 
-    
-    
-    
-    //Functions to help
-    
-    
-    
+    /*----------------------------------------------------------------------------------------------------
+     Other functions
+     -----------------------------------------------------------------------------------------------------*/
     
     
     //Function to download JSON response
@@ -82,33 +119,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         for object in stations {
                             let station = Station(station: object)
                             self.stations.append(station)
-                            print(station.name)
-                    
-                            
                         }
-                        
-                        
-                        
+                        self.tabelView.reloadData()
                     }
                     
                 }
                 
-                
-                
-                
-      
-                    
                     
             }//End of responseJSON
         completed()
     }
     
 
-    
-    
-    
-    
 
 
-}
+}/*End main class*/
 

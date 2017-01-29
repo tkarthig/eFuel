@@ -14,17 +14,11 @@ class StationCell: UITableViewCell {
     @IBOutlet weak var stationName: UILabel!
     
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell(station: Station) {
+        stationName.text =  station.name
+        
     }
-    
-    
-    
 
-    
-    
-    
+
 
 }
