@@ -14,43 +14,13 @@ import Foundation
     let API_VERSION="3"
     let ACTION="search"
     let TYPE="rectangle"
-
-    let NORTHEST="(62.27513309999999,13.179013199999986)"
-   let SOUTHWEST="(60.2514115,11.202181999999993)"
-
-
-//let NORTHEST_LANG : Double = (Location.sharedInstance.longitude / abs(cos((Location.sharedInstance.latitude * 180.0 / M_PI))) * 111)
-
-
-/*
-A point (LAT, LNG)
-A distance or radius DIST
-1° of latitude ~= 69 miles ~= 111 kms
-1° of longitude ~= cos(latitude)*69 ~= cos(latitude)*111
-The SW point is:
-
-lng_sw = LNG - (DIST / abs(cos(radians(LAT))) * 111)
-lat_sw = LAT - (DIST / 111)
-The NE point is:
-
-lng_ne = LNG + (DIST / abs(cos(radians(LAT))) * 111)
-lat_ne = LAT + (DIST / 111)
-
-
-*/
-
-
-
-
-    //let NORTHEST="(37.785834,13.179013199999986)"
-    //let SOUTHWEST="(60.2514115,11.202181999999993)"
-
-
+    let DISTANCE_KM = 10.0
+    let NORTHEST_LAT : Double = Location.sharedInstance.latitude  + (DISTANCE_KM / 6371)
+    let NORTHEST_LONG : Double = Location.sharedInstance.longitude + (DISTANCE_KM / 6371 / cos((Location.sharedInstance.latitude * M_PI / 180.0))) * 180 / M_PI
+    let SOUTHWEST_LAT : Double = Location.sharedInstance.latitude  - (DISTANCE_KM / 6371)
+    let SOUTHWEST_LONG : Double = Location.sharedInstance.longitude - (DISTANCE_KM / 6371 / cos((Location.sharedInstance.latitude * M_PI / 180.0))) * 180.0 / M_PI
+    let NORTHEST = "(" + String(NORTHEST_LAT) + "," + String(NORTHEST_LONG) + ")"
+    let SOUTHWEST = "(" + String(SOUTHWEST_LAT) + "," + String(SOUTHWEST_LONG ) + ")"
+    let CURRENT_URL = "\(BASE_URL)apikey=\(API_KEY)&apiversion=\(API_VERSION)&action=\(ACTION)&type=\(TYPE)&northeast=\(NORTHEST)&southwest=\(SOUTHWEST)"
     typealias DownloadComplete = ()->()
-
-
-   let CURRENT_URL = "\(BASE_URL)apikey=\(API_KEY)&apiversion=\(API_VERSION)&action=\(ACTION)&type=\(TYPE)&northeast=\(NORTHEST)&southwest=\(SOUTHWEST)"
- 
- 
-
 

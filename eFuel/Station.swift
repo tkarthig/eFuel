@@ -18,8 +18,10 @@ class Station {
     var _city : String!
     var _positionLatitude : String!
     var _positionLongitude : String!
-    
-    
+
+    /*----------------------------------------------------------------------------------------------------
+     Check the class variable for nil
+     -----------------------------------------------------------------------------------------------------*/
     var name: String {
         
         if _name == nil {
@@ -29,7 +31,6 @@ class Station {
     }
     
     var street : String {
-        
         if _street == nil {
             _street = ""
             
@@ -83,9 +84,9 @@ class Station {
         return _positionLongitude
     }
     
-    
-    
-    
+    /*----------------------------------------------------------------------------------------------------
+     Constructor to set the variables
+     -----------------------------------------------------------------------------------------------------*/
     init(station: Dictionary<String, AnyObject>) {
         
         if let station = station["csmd"] as? Dictionary<String, AnyObject> {
@@ -105,14 +106,4 @@ class Station {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
 }//End main class
-
-
-

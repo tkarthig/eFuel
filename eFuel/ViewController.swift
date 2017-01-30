@@ -26,11 +26,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startMonitoringSignificantLocationChanges()
+        locationAuthStatus()
         
         
         
@@ -45,7 +45,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        locationAuthStatus()
     }
     
     
@@ -94,6 +93,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = stations[indexPath.row] as Station
         self.name.text = selectedItem.name
+        
+        print (Location.sharedInstance.latitude,Location.sharedInstance.longitude )
+        
+       // print(NORTHEST_TEST, SOUTHWEST_TEST)
         
         
     }
