@@ -32,8 +32,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locationManager.startMonitoringSignificantLocationChanges()
         locationAuthStatus()
         
-        
-        
         self.stations = [Station]()
         tabelView.delegate = self
         tabelView.dataSource=self
@@ -45,6 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     
