@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tabelView: UITableView!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var address: UILabel!
     
     
     let locationManager = CLLocationManager()
@@ -92,24 +93,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = stations[indexPath.row] as Station
         self.name.text = selectedItem.name
+        self.address.text = selectedItem.street + "" + selectedItem.house_number + ", " + selectedItem.zipcode + ", " + selectedItem.city
         
         print (Location.sharedInstance.latitude,Location.sharedInstance.longitude )
-        
-       // print(NORTHEST_TEST, SOUTHWEST_TEST)
-        
-        
+        print(NORTHEST,SOUTHWEST)
     }
-    
-
     /*----------------------------------------------------------------------------------------------------
      Other functions
      -----------------------------------------------------------------------------------------------------*/
-    
-    
     //Function to download JSON response
     func downloadStations(completed: DownloadComplete)  {
         let stationsURL = URL(string : CURRENT_URL)!
-        
         print(CURRENT_URL)
         
         Alamofire.request(stationsURL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: nil)
@@ -126,10 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     }
                     
                 }
-                
-                    
             }//End of responseJSON
         completed()
     }
-    
 }/*End main class*/

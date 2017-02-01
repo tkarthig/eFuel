@@ -114,17 +114,13 @@
 		5258AB571E2BA4AA003AB89D /* eFuel */ = {
 			isa = PBXGroup;
 			children = (
+				5287CE151E421FDC0055C160 /* Model */,
+				5287CE171E4220480055C160 /* View */,
+				5287CE161E4220260055C160 /* Controller */,
+				5287CE181E4220780055C160 /* Resources */,
 				5258AB581E2BA4AA003AB89D /* AppDelegate.swift */,
-				5258AB5A1E2BA4AA003AB89D /* ViewController.swift */,
-				5258AB5C1E2BA4AA003AB89D /* Main.storyboard */,
 				5258AB5F1E2BA4AA003AB89D /* Assets.xcassets */,
-				5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */,
 				5258AB641E2BA4AA003AB89D /* Info.plist */,
-				5246A59C1E2D0BDC005B074C /* NobilAPI.swift */,
-				528DE9ED1E2EB94D000DF931 /* Notes.rtf */,
-				52B887131E350CA3000AAE93 /* Station.swift */,
-				524F1A071E3CCA0F006E2ADC /* StationCell.swift */,
-				5211244C1E3E4ECB006D3CBF /* Location.swift */,
 			);
 			path = eFuel;
 			sourceTree = "<group>";
@@ -145,6 +141,42 @@
 				5258AB7A1E2BA4AA003AB89D /* Info.plist */,
 			);
 			path = eFuelUITests;
+			sourceTree = "<group>";
+		};
+		5287CE151E421FDC0055C160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52B887131E350CA3000AAE93 /* Station.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5287CE161E4220260055C160 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5258AB5A1E2BA4AA003AB89D /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5287CE171E4220480055C160 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */,
+				5258AB5C1E2BA4AA003AB89D /* Main.storyboard */,
+				524F1A071E3CCA0F006E2ADC /* StationCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5287CE181E4220780055C160 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				528DE9ED1E2EB94D000DF931 /* Notes.rtf */,
+				5211244C1E3E4ECB006D3CBF /* Location.swift */,
+				5246A59C1E2D0BDC005B074C /* NobilAPI.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B6A389067505A1A6B8513080 /* Pods */ = {

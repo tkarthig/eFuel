@@ -24,4 +24,3 @@ import Foundation
     let SOUTHWEST = "(" + String(SOUTHWEST_LAT) + "," + String(SOUTHWEST_LONG ) + ")"
     let CURRENT_URL = "\(BASE_URL)apikey=\(API_KEY)&apiversion=\(API_VERSION)&action=\(ACTION)&type=\(TYPE)&northeast=\(NORTHEST)&southwest=\(SOUTHWEST)"
     typealias DownloadComplete = ()->()
-

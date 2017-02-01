@@ -98,9 +98,8 @@ class Station {
                 var token = position.components(separatedBy: delimiter)
                 _positionLatitude = token[0].replacingOccurrences(of: "(", with: "")
                 _positionLongitude = token[1].replacingOccurrences(of: ")", with: "")
-                
-                
             }
+            //if
         }
         
         
