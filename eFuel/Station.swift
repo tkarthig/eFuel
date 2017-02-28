@@ -16,6 +16,7 @@ class Station {
     var _house_number : String!
     var _zipcode : String!
     var _city : String!
+    var _chargingPoints : String!
     var _positionLatitude : String!
     var _positionLongitude : String!
 
@@ -65,6 +66,17 @@ class Station {
         return _city
     }
     
+    
+    var chargingPoints : String {
+        
+        if _chargingPoints == nil {
+            _chargingPoints = ""
+            
+        }
+        return _chargingPoints
+    }
+    
+    
     var positionLatitude  : String {
         
         if _positionLatitude == nil {
@@ -99,7 +111,26 @@ class Station {
                 _positionLatitude = token[0].replacingOccurrences(of: "(", with: "")
                 _positionLongitude = token[1].replacingOccurrences(of: ")", with: "")
             }
-            //if
+            if let street = station["Street"] as? String {
+                _street=street
+            }
+            if let house_number = station["House_number"] as? String {
+                _house_number=house_number
+            }
+            if let zipcode = station["Zipcode"] as? String {
+                _zipcode=zipcode
+            }
+            if let city = station["City"] as? String {
+                _city=city
+            }
+            if let chargingPoints = station["Number_charging_points"] as? Int{
+                _chargingPoints=String(chargingPoints)
+            }
+
+            
+            
+            //Number_charging_points
+            
         }
         
         

@@ -117,7 +117,8 @@
 				5287CE151E421FDC0055C160 /* Model */,
 				5287CE171E4220480055C160 /* View */,
 				5287CE161E4220260055C160 /* Controller */,
-				5287CE181E4220780055C160 /* Resources */,
+				52794C861E585D8300210527 /* API */,
+				5287CE181E4220780055C160 /* Supporting Files */,
 				5258AB581E2BA4AA003AB89D /* AppDelegate.swift */,
 				5258AB5F1E2BA4AA003AB89D /* Assets.xcassets */,
 				5258AB641E2BA4AA003AB89D /* Info.plist */,
@@ -143,6 +144,13 @@
 			path = eFuelUITests;
 			sourceTree = "<group>";
 		};
+		52794C861E585D8300210527 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		5287CE151E421FDC0055C160 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +162,7 @@
 		5287CE161E4220260055C160 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				524F1A071E3CCA0F006E2ADC /* StationCell.swift */,
 				5258AB5A1E2BA4AA003AB89D /* ViewController.swift */,
 			);
 			name = Controller;
@@ -164,19 +173,18 @@
 			children = (
 				5258AB611E2BA4AA003AB89D /* LaunchScreen.storyboard */,
 				5258AB5C1E2BA4AA003AB89D /* Main.storyboard */,
-				524F1A071E3CCA0F006E2ADC /* StationCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		5287CE181E4220780055C160 /* Resources */ = {
+		5287CE181E4220780055C160 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				528DE9ED1E2EB94D000DF931 /* Notes.rtf */,
 				5211244C1E3E4ECB006D3CBF /* Location.swift */,
 				5246A59C1E2D0BDC005B074C /* NobilAPI.swift */,
 			);
-			name = Resources;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B6A389067505A1A6B8513080 /* Pods */ = {

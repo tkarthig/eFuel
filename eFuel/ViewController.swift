@@ -14,8 +14,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     @IBOutlet weak var tabelView: UITableView!
+    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var chargingPoints: UILabel!
     
     
     let locationManager = CLLocationManager()
@@ -93,7 +95,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = stations[indexPath.row] as Station
         self.name.text = selectedItem.name
-        self.address.text = selectedItem.street + "" + selectedItem.house_number + ", " + selectedItem.zipcode + ", " + selectedItem.city
+        self.address.text = selectedItem.street + " " + selectedItem.house_number + ", " + selectedItem.zipcode + " " + selectedItem.city
+        self.chargingPoints.text = selectedItem.chargingPoints
+        
         
         print (Location.sharedInstance.latitude,Location.sharedInstance.longitude )
         print(NORTHEST,SOUTHWEST)
