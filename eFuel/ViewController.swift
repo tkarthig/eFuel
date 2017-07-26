@@ -64,8 +64,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             locationManager.requestWhenInUseAuthorization()
             locationAuthStatus()
         }
-    
-        
         
     }
     

@@ -126,10 +126,6 @@ class Station {
             if let chargingPoints = station["Number_charging_points"] as? Int{
                 _chargingPoints=String(chargingPoints)
             }
-
-            
-            
-            //Number_charging_points
             
         }
         

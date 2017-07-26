@@ -19,6 +19,7 @@
 		5258AB791E2BA4AA003AB89D /* eFuelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5258AB781E2BA4AA003AB89D /* eFuelUITests.swift */; };
 		528DE9EE1E2EB94D000DF931 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528DE9ED1E2EB94D000DF931 /* Notes.rtf */; };
 		52B887141E350CA3000AAE93 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B887131E350CA3000AAE93 /* Station.swift */; };
+		52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */; };
 		B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		5258AB7A1E2BA4AA003AB89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528DE9ED1E2EB94D000DF931 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		52B887131E350CA3000AAE93 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
 		61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.debug.xcconfig"; sourceTree = "<group>"; };
 		8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			children = (
 				524F1A071E3CCA0F006E2ADC /* StationCell.swift */,
 				5258AB5A1E2BA4AA003AB89D /* ViewController.swift */,
+				52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				5258AB5B1E2BA4AA003AB89D /* ViewController.swift in Sources */,
 				52B887141E350CA3000AAE93 /* Station.swift in Sources */,
 				5258AB591E2BA4AA003AB89D /* AppDelegate.swift in Sources */,
+				52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */,
 				5211244D1E3E4ECB006D3CBF /* Location.swift in Sources */,
 				5246A59D1E2D0BDC005B074C /* NobilAPI.swift in Sources */,
 			);
