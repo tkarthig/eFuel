@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewControllerTable.swift
 //  eFuel
 //
 //  Created by Theepan Karthigesan on 15/01/2017.
@@ -10,21 +10,23 @@ import UIKit
 import CoreLocation
 import Alamofire
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
+protocol DataSendDelegate {
+    
+    func userDidSelectRow (station: Station)
+
+}
+
+class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
     
     @IBOutlet weak var tabelView: UITableView!
-    
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var chargingPoints: UILabel!
-    
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
     var station : Station!
     var stations : [Station]!
+    var delegate : DataSendDelegate? = nil
     
     
     override func viewDidLoad() {
@@ -47,6 +49,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+    }
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Tester"{
+            
+            let receiveingVC : ViewControllerStationDetail = segue.destination as! ViewControllerStationDetail
+            self.delegate = receiveingVC
+    }
+    
+            
     }
     
     
@@ -92,10 +104,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = stations[indexPath.row] as Station
-        self.name.text = selectedItem.name
-        self.address.text = selectedItem.street + " " + selectedItem.house_number + ", " + selectedItem.zipcode + " " + selectedItem.city
-        self.chargingPoints.text = selectedItem.chargingPoints
-        
+        delegate?.userDidSelectRow(station: selectedItem)
         
         print (Location.sharedInstance.latitude,Location.sharedInstance.longitude )
         print(NORTHEST,SOUTHWEST)
@@ -114,7 +123,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if let dict = response.result.value as? Dictionary<String, AnyObject> {
                     if let stations = dict["chargerstations"] as? [Dictionary<String, AnyObject>] {
                         for object in stations {
-                            let station = Station(station: object)
+                            let station = StationFactory.selectStation(station: object)
                             self.stations.append(station)
                             
                         }
