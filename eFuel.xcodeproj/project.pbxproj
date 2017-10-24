@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5208F86B1F9383630052BDCF /* StationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208F86A1F9383630052BDCF /* StationBuilder.swift */; };
+		5208F86D1F93DEA30052BDCF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208F86C1F93DEA30052BDCF /* Downloader.swift */; };
 		5211244D1E3E4ECB006D3CBF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211244C1E3E4ECB006D3CBF /* Location.swift */; };
 		5222922C1F28F6D00016F746 /* ViewControllerStationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222922B1F28F6D00016F746 /* ViewControllerStationDetail.swift */; };
 		5246A59D1E2D0BDC005B074C /* NobilAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246A59C1E2D0BDC005B074C /* NobilAPI.swift */; };
@@ -24,6 +25,7 @@
 		528DE9EE1E2EB94D000DF931 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528DE9ED1E2EB94D000DF931 /* Notes.rtf */; };
 		52B887141E350CA3000AAE93 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B887131E350CA3000AAE93 /* Station.swift */; };
 		52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */; };
+		52F9002C1F98976300411C61 /* StationIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9002B1F98976300411C61 /* StationIterator.swift */; };
 		B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		5208F86A1F9383630052BDCF /* StationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationBuilder.swift; sourceTree = "<group>"; };
+		5208F86C1F93DEA30052BDCF /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		5211244C1E3E4ECB006D3CBF /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5222922B1F28F6D00016F746 /* ViewControllerStationDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStationDetail.swift; sourceTree = "<group>"; };
 		5246A59C1E2D0BDC005B074C /* NobilAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NobilAPI.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		528DE9ED1E2EB94D000DF931 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		52B887131E350CA3000AAE93 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
+		52F9002B1F98976300411C61 /* StationIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationIterator.swift; sourceTree = "<group>"; };
 		61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.debug.xcconfig"; sourceTree = "<group>"; };
 		8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,8 +106,10 @@
 		5252DBB81F8C055D00E0D654 /* Pattern files */ = {
 			isa = PBXGroup;
 			children = (
+				5208F86C1F93DEA30052BDCF /* Downloader.swift */,
 				5252DBBB1F8C106E00E0D654 /* StationFactory.swift */,
 				5208F86A1F9383630052BDCF /* StationBuilder.swift */,
+				52F9002B1F98976300411C61 /* StationIterator.swift */,
 			);
 			name = "Pattern files";
 			sourceTree = "<group>";
@@ -136,7 +142,6 @@
 				5287CE151E421FDC0055C160 /* Model */,
 				5287CE171E4220480055C160 /* View */,
 				5287CE161E4220260055C160 /* Controller */,
-				52794C861E585D8300210527 /* API */,
 				5287CE181E4220780055C160 /* Supporting Files */,
 				5258AB581E2BA4AA003AB89D /* AppDelegate.swift */,
 				5258AB5F1E2BA4AA003AB89D /* Assets.xcassets */,
@@ -161,13 +166,6 @@
 				5258AB7A1E2BA4AA003AB89D /* Info.plist */,
 			);
 			path = eFuelUITests;
-			sourceTree = "<group>";
-		};
-		52794C861E585D8300210527 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		5287CE151E421FDC0055C160 /* Model */ = {
@@ -427,11 +425,13 @@
 			files = (
 				5252DBBA1F8C05F000E0D654 /* ElectricStation.swift in Sources */,
 				5222922C1F28F6D00016F746 /* ViewControllerStationDetail.swift in Sources */,
+				5208F86D1F93DEA30052BDCF /* Downloader.swift in Sources */,
 				5208F86B1F9383630052BDCF /* StationBuilder.swift in Sources */,
 				524F1A081E3CCA0F006E2ADC /* StationCell.swift in Sources */,
 				5258AB5B1E2BA4AA003AB89D /* ViewControllerTable.swift in Sources */,
 				52B887141E350CA3000AAE93 /* Station.swift in Sources */,
 				5258AB591E2BA4AA003AB89D /* AppDelegate.swift in Sources */,
+				52F9002C1F98976300411C61 /* StationIterator.swift in Sources */,
 				52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */,
 				5211244D1E3E4ECB006D3CBF /* Location.swift in Sources */,
 				5246A59D1E2D0BDC005B074C /* NobilAPI.swift in Sources */,
@@ -606,7 +606,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthig.eFuel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -622,7 +622,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karthig.eFuel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

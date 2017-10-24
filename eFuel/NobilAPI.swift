@@ -10,7 +10,7 @@ import Foundation
 
 
 
-    let BASE_URL = "https://nobil.no/api/server/search.php?"
+    let BASE_URL = "http://nobil.no/api/server/search.php?"
     let API_KEY="cd4940380eaee58fe2f84ef3d66dd572"
     let API_VERSION="3"
     let ACTION="search"

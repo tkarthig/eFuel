@@ -11,7 +11,6 @@ import CoreLocation
 import Alamofire
 
 protocol DataSendDelegate {
-    
     func userDidSelectRow (station: Station)
 
 }
@@ -41,10 +40,35 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
         tabelView.delegate = self
         tabelView.dataSource=self
         
-        self.downloadStations {
+  
+        Downloader.getOrders { responseObject, error in
+            
            
-         }
+          
+         let data = responseObject!["chargerstations"] as? [Dictionary<String, AnyObject>]
+            print (data)
+            
+            
+            for object in data! {
+                let station = StationFactory.selectStation(station: object)
+                self.stations.append(station)
+                 self.stations.append(station)
+                self.tabelView.reloadData()
+            }
+ 
+                
+            
+            
+        }
+        
+ 
+        
+        
+      
+        
     }/*End viewDidLoad()*/
+    
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
