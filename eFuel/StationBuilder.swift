@@ -9,25 +9,18 @@
 import Foundation
 
 
-class StationBuilder {
+class StationBuilder:Builder {
     
- func createElecticStation(station: Dictionary<String, AnyObject>) -> ElectricStation {
+    var station : Station!
     
-    let output = ElectricStation (station: station)
+    init(station: Station) {
+        self.station = station
+    }
     
     
-    return output
+    func buildPart() -> Station {
+        return station
+    }
     
-}
-
-
-
-
-
-
-
-
-
-
 
 }

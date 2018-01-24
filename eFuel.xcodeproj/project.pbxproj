@@ -10,6 +10,7 @@
 		5208F86B1F9383630052BDCF /* StationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208F86A1F9383630052BDCF /* StationBuilder.swift */; };
 		5208F86D1F93DEA30052BDCF /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5208F86C1F93DEA30052BDCF /* Downloader.swift */; };
 		5211244D1E3E4ECB006D3CBF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5211244C1E3E4ECB006D3CBF /* Location.swift */; };
+		5218A54B201934660022B6BF /* StationListDictionaryIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5218A54A201934660022B6BF /* StationListDictionaryIterator.swift */; };
 		5222922C1F28F6D00016F746 /* ViewControllerStationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222922B1F28F6D00016F746 /* ViewControllerStationDetail.swift */; };
 		5246A59D1E2D0BDC005B074C /* NobilAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246A59C1E2D0BDC005B074C /* NobilAPI.swift */; };
 		524F1A081E3CCA0F006E2ADC /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524F1A071E3CCA0F006E2ADC /* StationCell.swift */; };
@@ -25,7 +26,20 @@
 		528DE9EE1E2EB94D000DF931 /* Notes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 528DE9ED1E2EB94D000DF931 /* Notes.rtf */; };
 		52B887141E350CA3000AAE93 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B887131E350CA3000AAE93 /* Station.swift */; };
 		52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */; };
-		52F9002C1F98976300411C61 /* StationIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9002B1F98976300411C61 /* StationIterator.swift */; };
+		52F984102019067900075156 /* ElectricStationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F9840F2019067900075156 /* ElectricStationFactory.swift */; };
+		52FCD21D20190EDF00768A5B /* GasStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD21C20190EDF00768A5B /* GasStation.swift */; };
+		52FCD21F20190F6100768A5B /* GasStationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD21E20190F6100768A5B /* GasStationFactory.swift */; };
+		52FCD22120190FC500768A5B /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD22020190FC500768A5B /* Builder.swift */; };
+		52FCD2232019104200768A5B /* Director.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD2222019104200768A5B /* Director.swift */; };
+		52FCD225201916DA00768A5B /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD224201916DA00768A5B /* Car.swift */; };
+		52FCD2272019174300768A5B /* GasolineCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD2262019174300768A5B /* GasolineCar.swift */; };
+		52FCD2292019176200768A5B /* ElectricCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD2282019176200768A5B /* ElectricCar.swift */; };
+		52FCD22B20191E4D00768A5B /* Share.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD22A20191E4D00768A5B /* Share.swift */; };
+		52FCD22D20191E7200768A5B /* FacebookShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD22C20191E7200768A5B /* FacebookShare.swift */; };
+		52FCD22F20191E8200768A5B /* TwitterShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD22E20191E8200768A5B /* TwitterShare.swift */; };
+		52FCD231201929EF00768A5B /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD230201929EF00768A5B /* Iterator.swift */; };
+		52FCD23520192A2600768A5B /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD23420192A2600768A5B /* List.swift */; };
+		52FCD23720192A4C00768A5B /* StationListDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCD23620192A4C00768A5B /* StationListDictionary.swift */; };
 		B988849908EA2224F1DF9CF5 /* Pods_eFuel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +64,7 @@
 		5208F86A1F9383630052BDCF /* StationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationBuilder.swift; sourceTree = "<group>"; };
 		5208F86C1F93DEA30052BDCF /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		5211244C1E3E4ECB006D3CBF /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5218A54A201934660022B6BF /* StationListDictionaryIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListDictionaryIterator.swift; sourceTree = "<group>"; };
 		5222922B1F28F6D00016F746 /* ViewControllerStationDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerStationDetail.swift; sourceTree = "<group>"; };
 		5246A59C1E2D0BDC005B074C /* NobilAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NobilAPI.swift; sourceTree = "<group>"; };
 		524F1A071E3CCA0F006E2ADC /* StationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
@@ -71,7 +86,20 @@
 		528DE9ED1E2EB94D000DF931 /* Notes.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Notes.rtf; sourceTree = "<group>"; };
 		52B887131E350CA3000AAE93 /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		52C02D5A1E8E22B20056FCC1 /* ViewControllerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerMap.swift; sourceTree = "<group>"; };
-		52F9002B1F98976300411C61 /* StationIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationIterator.swift; sourceTree = "<group>"; };
+		52F9840F2019067900075156 /* ElectricStationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricStationFactory.swift; sourceTree = "<group>"; };
+		52FCD21C20190EDF00768A5B /* GasStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStation.swift; sourceTree = "<group>"; };
+		52FCD21E20190F6100768A5B /* GasStationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasStationFactory.swift; sourceTree = "<group>"; };
+		52FCD22020190FC500768A5B /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		52FCD2222019104200768A5B /* Director.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Director.swift; sourceTree = "<group>"; };
+		52FCD224201916DA00768A5B /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		52FCD2262019174300768A5B /* GasolineCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasolineCar.swift; sourceTree = "<group>"; };
+		52FCD2282019176200768A5B /* ElectricCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricCar.swift; sourceTree = "<group>"; };
+		52FCD22A20191E4D00768A5B /* Share.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Share.swift; sourceTree = "<group>"; };
+		52FCD22C20191E7200768A5B /* FacebookShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookShare.swift; sourceTree = "<group>"; };
+		52FCD22E20191E8200768A5B /* TwitterShare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterShare.swift; sourceTree = "<group>"; };
+		52FCD230201929EF00768A5B /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		52FCD23420192A2600768A5B /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		52FCD23620192A4C00768A5B /* StationListDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListDictionary.swift; sourceTree = "<group>"; };
 		61B90379150134C637F850D8 /* Pods-eFuel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.debug.xcconfig"; sourceTree = "<group>"; };
 		8672508FCBCEC87FB68DFA6C /* Pods_eFuel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eFuel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70CB1F876BE2AF75F564A71 /* Pods-eFuel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eFuel.release.xcconfig"; path = "Pods/Target Support Files/Pods-eFuel/Pods-eFuel.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +135,16 @@
 			isa = PBXGroup;
 			children = (
 				5208F86C1F93DEA30052BDCF /* Downloader.swift */,
+				52FCD230201929EF00768A5B /* Iterator.swift */,
 				5252DBBB1F8C106E00E0D654 /* StationFactory.swift */,
+				52F9840F2019067900075156 /* ElectricStationFactory.swift */,
 				5208F86A1F9383630052BDCF /* StationBuilder.swift */,
-				52F9002B1F98976300411C61 /* StationIterator.swift */,
+				52FCD21E20190F6100768A5B /* GasStationFactory.swift */,
+				52FCD22020190FC500768A5B /* Builder.swift */,
+				52FCD2222019104200768A5B /* Director.swift */,
+				52FCD23420192A2600768A5B /* List.swift */,
+				52FCD23620192A4C00768A5B /* StationListDictionary.swift */,
+				5218A54A201934660022B6BF /* StationListDictionaryIterator.swift */,
 			);
 			name = "Pattern files";
 			sourceTree = "<group>";
@@ -171,9 +206,8 @@
 		5287CE151E421FDC0055C160 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52F9841120190CDC00075156 /* Data */,
 				5252DBB81F8C055D00E0D654 /* Pattern files */,
-				52B887131E350CA3000AAE93 /* Station.swift */,
-				5252DBB91F8C05F000E0D654 /* ElectricStation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -206,6 +240,22 @@
 				5246A59C1E2D0BDC005B074C /* NobilAPI.swift */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		52F9841120190CDC00075156 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				52B887131E350CA3000AAE93 /* Station.swift */,
+				5252DBB91F8C05F000E0D654 /* ElectricStation.swift */,
+				52FCD21C20190EDF00768A5B /* GasStation.swift */,
+				52FCD224201916DA00768A5B /* Car.swift */,
+				52FCD2262019174300768A5B /* GasolineCar.swift */,
+				52FCD2282019176200768A5B /* ElectricCar.swift */,
+				52FCD22A20191E4D00768A5B /* Share.swift */,
+				52FCD22C20191E7200768A5B /* FacebookShare.swift */,
+				52FCD22E20191E8200768A5B /* TwitterShare.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		B6A389067505A1A6B8513080 /* Pods */ = {
@@ -424,17 +474,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				5252DBBA1F8C05F000E0D654 /* ElectricStation.swift in Sources */,
+				52FCD23720192A4C00768A5B /* StationListDictionary.swift in Sources */,
 				5222922C1F28F6D00016F746 /* ViewControllerStationDetail.swift in Sources */,
 				5208F86D1F93DEA30052BDCF /* Downloader.swift in Sources */,
+				52FCD22F20191E8200768A5B /* TwitterShare.swift in Sources */,
+				52FCD21D20190EDF00768A5B /* GasStation.swift in Sources */,
 				5208F86B1F9383630052BDCF /* StationBuilder.swift in Sources */,
 				524F1A081E3CCA0F006E2ADC /* StationCell.swift in Sources */,
 				5258AB5B1E2BA4AA003AB89D /* ViewControllerTable.swift in Sources */,
+				52FCD22D20191E7200768A5B /* FacebookShare.swift in Sources */,
+				52FCD22B20191E4D00768A5B /* Share.swift in Sources */,
+				52FCD2232019104200768A5B /* Director.swift in Sources */,
+				52FCD2292019176200768A5B /* ElectricCar.swift in Sources */,
+				52FCD22120190FC500768A5B /* Builder.swift in Sources */,
+				52FCD21F20190F6100768A5B /* GasStationFactory.swift in Sources */,
 				52B887141E350CA3000AAE93 /* Station.swift in Sources */,
 				5258AB591E2BA4AA003AB89D /* AppDelegate.swift in Sources */,
-				52F9002C1F98976300411C61 /* StationIterator.swift in Sources */,
+				52FCD23520192A2600768A5B /* List.swift in Sources */,
+				5218A54B201934660022B6BF /* StationListDictionaryIterator.swift in Sources */,
 				52C02D5B1E8E22B20056FCC1 /* ViewControllerMap.swift in Sources */,
+				52FCD231201929EF00768A5B /* Iterator.swift in Sources */,
 				5211244D1E3E4ECB006D3CBF /* Location.swift in Sources */,
 				5246A59D1E2D0BDC005B074C /* NobilAPI.swift in Sources */,
+				52FCD2272019174300768A5B /* GasolineCar.swift in Sources */,
+				52FCD225201916DA00768A5B /* Car.swift in Sources */,
+				52F984102019067900075156 /* ElectricStationFactory.swift in Sources */,
 				5252DBBC1F8C106E00E0D654 /* StationFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -41,7 +41,7 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
         tabelView.dataSource=self
         
   
-        Downloader.getOrders { responseObject, error in
+        CoreData.getOrders { responseObject, error in
             
            
           
@@ -50,22 +50,42 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
             
             
             for object in data! {
-                let station = StationFactory.selectStation(station: object)
-                self.stations.append(station)
-                 self.stations.append(station)
-                self.tabelView.reloadData()
-            }
- 
+                let eFactory : StationFactory
+                var eStation : Station
+                let sBuilder : StationBuilder
+                let stationDirector : Director
                 
-            
-            
+                //Factory part
+                eFactory = ElectricStationFactory()
+                eStation = eFactory.createStation(object:object)
+                
+                
+                //Builder part
+                sBuilder = StationBuilder(station: eStation)
+                stationDirector = Director()
+                stationDirector.constructStation(builder: sBuilder)
+                eStation = stationDirector.getStation()
+                
+                //Bridge testing
+                eStation.car = ElectricCar(name: "Tesla", type: "Test", model: "85D")
+                
+                
+                //Template method test
+                var fShare : Share
+                fShare = FacebookShare(station: eStation)
+                fShare.Share()
+                
+                self.stations.append(eStation)
+                self.stations.append(eStation)
+                self.tabelView.reloadData()
+                
+
+                
+                
+                
+                
+            }
         }
-        
- 
-        
-        
-      
-        
     }/*End viewDidLoad()*/
     
 
@@ -133,9 +153,15 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
         print (Location.sharedInstance.latitude,Location.sharedInstance.longitude )
         print(NORTHEST,SOUTHWEST)
     }
+    
+    
+    
     /*----------------------------------------------------------------------------------------------------
      Other functions
      -----------------------------------------------------------------------------------------------------*/
+    
+    
+    /*
     //Function to download JSON response
     func downloadStations(completed: DownloadComplete)  {
         let stationsURL = URL(string : CURRENT_URL)!
@@ -157,5 +183,5 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }//End of responseJSON
         completed()
-    }
+    }*/
 }/*End main class*/

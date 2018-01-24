@@ -8,15 +8,10 @@
 
 import Foundation
 
-class StationFactory{
+protocol StationFactory {
     
-    class func selectStation (station: Dictionary<String, AnyObject>) -> Station {
-        let builder = StationBuilder()
-        
-        return builder.createElecticStation(station:station)
-        
-        //return ElectricStation (station: station)
-        
-    }
+    func createStation(object: Dictionary<String, AnyObject>) -> Station 
+    
+    
     
 }

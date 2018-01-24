@@ -1,23 +1,15 @@
 //
-//  Station.swift
+//  GasStation.swift
 //  eFuel
 //
-//  Created by Theepan Karthigesan on 22/01/2017.
-//  Copyright © 2017 Karthig.com. All rights reserved.
-//
-
-//
-//  Station.swift
-//  eFuel
-//
-//  Created by Theepan Karthigesan on 22/01/2017.
-//  Copyright © 2017 Karthig.com. All rights reserved.
+//  Created by Theepan Karthigesan on 24/01/2018.
+//  Copyright © 2018 Karthig.com. All rights reserved.
 //
 
 import UIKit
 //import Alamofire
 
-class ElectricStation : Station {
+class GasStation : Station {
     
     var name: String
     var street: String
@@ -31,7 +23,6 @@ class ElectricStation : Station {
     
     
     
-    
     required init(station: Dictionary<String, AnyObject>) {
         
         self.name = ""
@@ -42,6 +33,7 @@ class ElectricStation : Station {
         self.chargingPoints=""
         self.positionLatitude=""
         self.positionLongitude=""
+      
         
         if let station = station["csmd"] as? Dictionary<String, AnyObject> {
             if let _name = station["name"] as? String {
@@ -114,4 +106,5 @@ class ElectricStation : Station {
     }
     
 }//End main class
+
 

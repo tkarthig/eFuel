@@ -19,6 +19,7 @@ protocol Station {
     var chargingPoints : String {get set}
     var positionLatitude : String {get set}
     var positionLongitude : String {get set}
+    var car : Car? {get set}
     
     init(station: Dictionary<String, AnyObject>)
 
