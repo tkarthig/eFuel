@@ -10,9 +10,6 @@ import Foundation
 
 class StationFactory{
     
-    
-    
-    
     class func selectStation (station: Dictionary<String, AnyObject>) -> Station {
         let builder = StationBuilder()
         
@@ -21,10 +18,5 @@ class StationFactory{
         //return ElectricStation (station: station)
         
     }
-    
-    
-    
-    
-    
     
 }

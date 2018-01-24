@@ -46,7 +46,7 @@ class ViewControllerTable: UIViewController, UITableViewDelegate, UITableViewDat
            
           
          let data = responseObject!["chargerstations"] as? [Dictionary<String, AnyObject>]
-            print (data)
+            print (data!)
             
             
             for object in data! {
